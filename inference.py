@@ -1,13 +1,13 @@
 import requests
 
-def chat_once(uner_input):
+def chat_once(user_input):
     url = "http://localhost:8080/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
     payload = {
         "model": "llama3.2-1B",
         "messages": [
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user",   "content": f"""{uner_input}"""}
+            {"role": "system", "content": "you are a assistant who replies in in poems"},
+            {"role": "user",   "content": f"""{user_input}"""}
         ],
         "temperature": 0.7,
         "max_tokens": 128
